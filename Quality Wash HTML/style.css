@@ -58,6 +58,17 @@ form .password{
     background: none;
 }
 
+.email input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+
 .password input{
     width: 100%;
     padding: 10px 0;
@@ -79,6 +90,19 @@ form .password{
     pointer-events: none;
     transition: .5s;
 }
+
+.email label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    line-height: 50px;
+    pointer-events: none;
+    transition: .5s;
+}
+
 
 .password label{
     position: absolute;
@@ -114,7 +138,14 @@ form .password{
     font-size: 12px;
 }
 
+.email input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+    font-size: 12px;
+}
+
 .username input:focus ~ label,
+.email input:focus ~ label,
 .password input:focus ~ label{
     width: 100%;
 }
