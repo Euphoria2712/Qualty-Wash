@@ -26,6 +26,108 @@ body{
 }
 
 .formulario form{
-    display: flex;
-    flex-direction: column;
+    padding:  0 40px;
+    box-sizing: border-box;
+}
+form .username{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 20px;
+}
+
+
+form .email{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 20px;
+}
+
+form .password{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 20px;
+}
+
+.username input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.password input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.username label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    line-height: 50px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.password label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    line-height: 50px;
+    pointer-events: none;
+    transition: .5s;
+
+}
+
+.username span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #2691d9;
+    border-radius: 4px;
+    transition: .5s;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
+
+.username input:valid ~ label,
+.password input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+    font-size: 12px;
+}
+
+.username input:focus ~ label,
+.password input:focus ~ label{
+    width: 100%;
+}
+
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 0px solid;
+    background: #7DF3F5;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
 }
