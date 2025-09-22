@@ -1,0 +1,31 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(150deg, #7DF3F5, #D5F1F2);
+    height: 100vh;
+
+}
+
+.formulario{
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+.formulario h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario form{
+    display: flex;
+    flex-direction: column;
+}
