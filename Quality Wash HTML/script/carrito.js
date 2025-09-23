@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let cart = [];
 
-    
+    // Muestra u oculta el carrito al hacer clic en el ícono
     cartIcon.addEventListener('click', (event) => {
         event.preventDefault();
         shoppingCart.classList.toggle('active');
     });
 
-
+    // Agrega productos al carrito
     buyButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             const productCard = event.target.closest('.producto-card');
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    
+    // Renderiza los productos en el carrito
     function renderCart() {
         cartItemsContainer.innerHTML = '';
         if (cart.length === 0) {
@@ -45,17 +45,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 cartItemElement.innerHTML = `
                     <div class="cart-item-info">
                         <span>${item.name}</span>
-                        <span>$${item.price.toFixed(2)}</span>
+                        <span>$${item.price.toFixed(3)}</span>
                     </div>
                 `;
                 cartItemsContainer.appendChild(cartItemElement);
             });
         }
+        
         cartCountSpan.innerText = cart.length;
     }
 
+    // Maneja la compra
     const checkoutBtn = document.getElementById('checkout-btn');
-
+    
     checkoutBtn.addEventListener('click', () => {
         
         if (cart.length === 0) {
@@ -72,9 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         shoppingCart.classList.remove('active');
     });
- 
+
+    // Actualiza el total del carrito
     function updateCartTotal() {
         const total = cart.reduce((sum, item) => sum + item.price, 0);
-        cartTotalPriceSpan.innerText = total.toFixed(2);
+        cartTotalPriceSpan.innerText = total.toFixed(3);
     }
 });
