@@ -86,18 +86,6 @@
     opacity: 1;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #f1f1f1;
-    padding: 10px 0;
-    text-align: center;
-    margin-left: 60px; 
-    transition: margin-left 0.3s;
-}
-
-
 body {
     background: linear-gradient(150deg, #7DF3F5, #D5F1F2); 
     font-family: Arial, sans-serif;
@@ -154,16 +142,6 @@ h2 {
 }
 
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #f1f1f1;
-    padding: 10px 0;
-    text-align: center;
-    margin-left: 60px;
-    transition: margin-left 0.3s;
-}
 
 #side-navbar:hover ~ footer {
     margin-left: 250px;
@@ -244,11 +222,10 @@ footer {
     background: #D5F1F2; 
 }
 
-/* Estilos para el carrito de compras */
 .cart-container {
     position: fixed;
     top: 0;
-    right: -400px; /* Oculto por defecto */
+    right: -400px; 
     width: 350px;
     height: 100%;
     background-color: white;
@@ -260,7 +237,7 @@ footer {
 }
 
 .cart-container.active {
-    right: 0; /* Visible cuando tiene la clase 'active' */
+    right: 0; 
 }
 
 #cart-items {
@@ -297,12 +274,12 @@ footer {
     margin-top: 20px;
 }
 
-/* Estilos para el nuevo contenedor del carrito en la esquina superior derecha */
+
 #top-right-cart-icon {
     position: fixed;
     top: 40px;
     right: 45px;
-    z-index: 300; /* Asegura que esté por encima de todos los demás elementos */
+    z-index: 300; 
 }
 
 #top-right-cart-icon a {
@@ -317,18 +294,18 @@ footer {
     height: auto;
 }
 
-/* Estilos para la burbuja numérica */
+
 #cart-count {
     position: absolute;
     top: -5px;
     right: -5px;
-    background-color: #2691d9; /* Un azul para destacar, puedes cambiarlo */
+    background-color: #2691d9; 
     color: white;
     font-size: 0.8em;
     font-weight: bold;
     border-radius: 50%;
     padding: 3px 6px;
-    min-width: 18px; /* Ancho mínimo para que se vea bien */
+    min-width: 18px; 
     text-align: center;
     border: 2px solid white;
 }

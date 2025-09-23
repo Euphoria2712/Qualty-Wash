@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const savedPassword = sessionStorage.getItem('password');
         
         if (enteredUsername === savedUsername && enteredPassword === savedPassword && savedUsername !== null) {
-            alert('¡Inicio de sesión exitoso!');
+            alert('¡Inicio de sesión exitoso!'); // Manda mensaje exitoso
             window.location.href = 'QualityWash.html'; // Redirige a la página principal
         } else {
-            alert('Nombre de usuario o contraseña incorrectos.');
+            alert('Nombre de usuario o contraseña incorrectos.'); // Manda mensaje de error
         }
     });
 });
