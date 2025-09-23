@@ -19,3 +19,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const logoutBtn = document.getElementById('logout-btn');
+
+    logoutBtn.addEventListener('click', (event) => {
+        event.preventDefault(); 
+
+        
+        alert('¡Hasta pronto! Has cerrado tu sesión.');
+
+        // Limpia los datos de sesión almacenados
+        sessionStorage.removeItem('username');
+        sessionStorage.removeItem('password');
+
+        // Redirige al usuario a la página de inicio de sesión
+        window.location.href = 'inicioSesion.html'; 
+    });
+});
