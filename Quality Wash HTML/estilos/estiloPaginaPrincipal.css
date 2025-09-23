@@ -1,0 +1,165 @@
+#main-content {
+    margin-left: 60px; /* Margen para empujar el contenido más allá de la barra de navegación colapsada */
+    padding: 20px;
+    transition: margin-left 0.3s; /* Transición para un movimiento suave */
+}
+
+
+#side-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px; 
+    height: 100%;
+    background-color: #333; 
+    color: white;
+    overflow-x: hidden; 
+    transition: width 0.3s;
+    z-index: 100;
+}
+
+
+#side-navbar:hover {
+    width: 250px; 
+}
+
+#side-navbar:hover ~ #main-content,
+#side-navbar:hover ~ footer {
+    margin-left: 250px; 
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 10px;
+    border-bottom: 1px solid #555;
+    white-space: nowrap; 
+}
+
+.user-avatar {
+    width: 60px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    opacity: 0; 
+    transition: opacity 0.3s;
+}
+
+#side-navbar:hover .user-name {
+    opacity: 1; 
+}
+
+
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #575757;
+}
+
+
+.nav-links {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#side-navbar:hover .nav-links {
+    opacity: 1;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 10px 0;
+    text-align: center;
+    margin-left: 60px; 
+    transition: margin-left 0.3s;
+}
+
+
+body {
+    background-color: #f0f2f5; 
+    color: #333; 
+}
+
+
+#main-content {
+    margin-left: 60px; 
+    padding: 20px;
+    transition: margin-left 0.3s;
+    background-color: white;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 20px 20px 20px 60px; 
+}
+
+#side-navbar:hover ~ #main-content {
+    margin-left: 250px; 
+}
+
+
+h2 {
+    font-size: 2.5em;
+    color: #2c3e50; 
+    border-bottom: 2px solid #3498db; 
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+
+#main-content p {
+    font-size: 1.1em;
+    line-height: 1.6; 
+    color: #555;
+}
+
+
+#main-content ul {
+    list-style: none; 
+    padding: 0;
+    margin-top: 20px;
+}
+
+#main-content ul li {
+    background-color: #ecf0f1; 
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#main-content ul li:hover {
+    background-color: #bdc3c7; 
+}
+
+
+footer {
+    
+    margin-left: 60px; 
+    transition: margin-left 0.3s;
+}
+
+#side-navbar:hover ~ footer {
+    margin-left: 250px;
+}
