@@ -99,19 +99,20 @@ footer {
 
 
 body {
-    background-color: #f0f2f5; 
+    background: linear-gradient(150deg, #7DF3F5, #D5F1F2); 
+    font-family: Arial, sans-serif;
     color: #333; 
+    min-height: 100vh; 
 }
 
 
 #main-content {
     margin-left: 60px; 
-    padding: 20px;
-    transition: margin-left 0.3s;
     background-color: white;
     border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
     margin: 20px 20px 20px 60px; 
+    transition: margin-left 0.3s;
 }
 
 #side-navbar:hover ~ #main-content {
@@ -143,7 +144,6 @@ h2 {
 
 #main-content ul li {
     background-color: #ecf0f1; 
-    margin-bottom: 10px;
     padding: 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -155,11 +155,180 @@ h2 {
 
 
 footer {
-    
-    margin-left: 60px; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 10px 0;
+    text-align: center;
+    margin-left: 60px;
     transition: margin-left 0.3s;
 }
 
 #side-navbar:hover ~ footer {
     margin-left: 250px;
+}
+
+
+.productos-limpieza {
+    margin-top: 40px;
+}
+
+.productos-limpieza h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.lista-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+}
+
+.producto-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.producto-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.producto-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.producto-card p {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.4;
+}
+
+.producto-card .precio {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2691d9; 
+    margin: 15px 0;
+}
+
+.producto-card .comprar-btn {
+    background: #7DF3F5; 
+    border: none;
+    border-radius: 25px;
+    color: #000000;
+    font-weight: 700;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.producto-card .comprar-btn:hover {
+    background: #D5F1F2; 
+}
+
+/* Estilos para el carrito de compras */
+.cart-container {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Oculto por defecto */
+    width: 350px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: right 0.4s ease-in-out;
+    z-index: 200;
+    overflow-y: auto;
+}
+
+.cart-container.active {
+    right: 0; /* Visible cuando tiene la clase 'active' */
+}
+
+#cart-items {
+    margin-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item-info span {
+    display: block;
+}
+
+.cart-total {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+}
+
+#checkout-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #7DF3F5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Estilos para el nuevo contenedor del carrito en la esquina superior derecha */
+#top-right-cart-icon {
+    position: fixed;
+    top: 40px;
+    right: 45px;
+    z-index: 300; /* Asegura que esté por encima de todos los demás elementos */
+}
+
+#top-right-cart-icon a {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+#top-right-cart-icon .cart-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para la burbuja numérica */
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #2691d9; /* Un azul para destacar, puedes cambiarlo */
+    color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 3px 6px;
+    min-width: 18px; /* Ancho mínimo para que se vea bien */
+    text-align: center;
+    border: 2px solid white;
 }

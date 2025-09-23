@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/estiloPaginaPrincipal.css">
+    
     <title>Quality Wash</title>
 </head>
 <body>
+    <div id="top-right-cart-icon">
+        <a href="#" id="cart-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" alt="Carrito de compras" class="cart-image">
+            <span id="cart-count" class="cart-bubble">0</span>
+        </a>
+    </div>
+
     <aside id="side-navbar">
     <div class="user-profile">
         <img src="https://distrimar.s3.amazonaws.com/static/apm/img/misc/default_user.png" alt="Foto de Usuario" class="user-avatar">
@@ -17,14 +25,80 @@
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Servicios</a></li>
             <li><a href="#">Perfil</a></li>
-            <li><a href="#">Cerrar Sesión</a></li>
+            
+            <li><a href="#" id="logout-btn">Cerrar Sesión</a></li>
         </ul>
     </nav>
     </aside>
 
+    <div id="shopping-cart" class="cart-container">
+        <h2>Carrito de Compras</h2>
+        <div id="cart-items">
+            <p>Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-total">
+            <p>Total: $<span id="cart-total-price">0.00</span></p>
+        </div>
+        <button id="checkout-btn">Finalizar Compra</button>
+    </div>
+
     <main id="main-content">
         <h1>Bienvenido a Quality Wash</h1>
         <p>Tu solución confiable para el lavado de tus prendas.</p>
+
+        <section class="productos-limpieza">
+            <h2>Productos de Limpieza</h2>
+            <div class="lista-productos">
+                <div class="producto-card">
+                    <img src="https://i5.walmartimages.com.mx/gr/images/product-images/img_large/00750043520892L.jpg" alt="Detergente Premium">
+                    <h3>Detergente Ariel</h3>
+                    <p>Fórmula concentrada para ropa blanca y de color, con un aroma fresco y duradero.</p>
+                    <span class="precio">$5.99</span>
+                    <button class="comprar-btn">Añadir al carrito</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.efN73fwTzxEiu_PcOSQcpAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Suavizante Concentrado">
+                    <h3>Suavizante Concentrado</h3>
+                    <p>Deja tus prendas increíblemente suaves, reduciendo arrugas y facilitando el planchado.</p>
+                    <span class="precio">$3.49</span>
+                    <button class="comprar-btn">Añadir al carrito</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="https://fuller.com.co/cdn/shop/files/blanqueador-sin-cloro-2000-fuller.png?v=1723569730&width=1445" alt="Blanqueador sin Cloro">
+                    <h3>Blanqueador sin Cloro</h3>
+                    <p>Elimina manchas difíciles sin dañar los tejidos, ideal para ropa delicada.</p>
+                    <span class="precio">$4.25</span>
+                    <button class="comprar-btn">Añadir al carrito</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="https://d2o812a6k13pkp.cloudfront.net/fit-in/1200x1200/filters:quality(100)/Categorias/40378192_01.jpeg20230227150220.jpg" alt="Quitamanchas">
+                    <h3>Quitamanchas</h3>
+                    <p>Actúa directamente sobre las manchas, dejándolas listas para el lavado.</p>
+                    <span class="precio">$2.99</span>
+                    <button class="comprar-btn">Añadir al carrito</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="https://a1.soysuper.com/e269c18c5f7fa3213f67590528d0cbee.1500.0.0.0.wmark.fc6b1a04.jpg" alt="Limpiador Multiusos">
+                    <h3>Limpiador Multiusos</h3>
+                    <p>Perfecto para todas las superficies, con un aroma a cítricos que refresca tu hogar.</p>
+                    <span class="precio">$6.50</span>
+                    <button class="comprar-btn">Añadir al carrito</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="https://arcashop.es/11914-large_default/toallitas-suavizantes-para-secadoras-40-toallitas-san-de-persan.jpg" alt="Toallitas Secadoras">
+                    <h3>Toallitas Secadoras</h3>
+                    <p>Ayudan a reducir la estática y a mantener la frescura de tu ropa en cada ciclo de secado.</p>
+                    <span class="precio">$1.99</span>
+                    <button class="comprar-btn">Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+
         <h2>Nuestros Servicios</h2>
         <p>Ofrecemos una variedad de servicios de lavado para satisfacer tus necesidades.</p>
         <ul>
@@ -39,5 +113,6 @@
 
         <p class="text-center">© 2025 Quality Wash. All rights reserved.</p>
     </footer>
+    <script src="script/carrito.js"></script>
 </body>
 </html>
