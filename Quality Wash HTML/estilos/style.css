@@ -1,10 +1,10 @@
-body{
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(150deg, #7DF3F5, #D5F1F2);
-    height: 100vh;
-
+    min-height: 100vh; 
+    position: relative;  
 }
 
 .formulario{
@@ -198,3 +198,12 @@ input[type="submit"]{
     letter-spacing: 2px;
 }
 
+.login-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+    color: #555;
+}
