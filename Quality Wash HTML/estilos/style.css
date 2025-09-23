@@ -17,6 +17,8 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.85); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
    
 }
 
@@ -162,3 +164,37 @@ input[type="submit"]{
     cursor: pointer;
     outline: none;
 }
+
+
+.background-image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://lavanderiasbogota.com.co/wp-content/uploads/2023/09/Lavanderias-en-Colombia-Lider-en-Calidad-y-Sostenibilidad.jpg'); 
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); 
+    z-index: -1; 
+}
+
+
+.main-title {
+    position: absolute;
+    top: 15%; 
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.main-title h1 {
+    font-size: 3.5em; 
+    margin: 0;
+    font-family: 'Poppins', sans-serif; 
+    letter-spacing: 2px;
+}
+
