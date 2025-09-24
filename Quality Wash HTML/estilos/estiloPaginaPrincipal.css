@@ -1,7 +1,7 @@
 #main-content {
-    margin-left: 60px; /* Margen para empujar el contenido más allá de la barra de navegación colapsada */
+    margin-left: 60px; 
     padding: 20px;
-    transition: margin-left 0.3s; /* Transición para un movimiento suave */
+    transition: margin-left 0.3s; 
 }
 
 
